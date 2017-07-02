@@ -1,0 +1,15 @@
+{
+  "name": "Movie Booking",
+  "description": "Online booking ticket",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "compression": "^1.6.2",
+    "express": "^4.15.3",
+    "serve-favicon": "^2.4.3"
+  }
+}
