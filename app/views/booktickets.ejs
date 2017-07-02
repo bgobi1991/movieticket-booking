@@ -1,0 +1,56 @@
+<div ng-show="currMovie">
+    <div class="pull-left"><h3>{{currMovie.name}}</h3></div>
+    <div class="pull-right"><a ng-click="back()" class="btn btn-info" href="javascript:">Back</a></h3></div>
+    <div style="clear: both"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-6">
+                <!-- <span data-ng-repeat="i in getCount(currMovie.rating) track by $index" class="glyphicon glyphicon-star"></span> -->
+                <div class="pull-right" style="background-color: #fff !important;padding: 5px">
+                    <span style="width: 10px;height: 10px;display:inline-block;background-color: #eaeaea"></span>
+                    <span class="booked">Booked</span>
+                    <span style="width: 10px;height: 10px;display:inline-block;background-color:green"></span>
+                    <span class="selected">Selected</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-2 totAmtlbl">Total:</div>
+                <div class="col-md-3 totalAmt">Rs. {{(currMovie.cost * selectedSize)}}</div>
+                <div class="col-md-3 totalAmt">No.Of Ticket</div>
+                <div class="col-md-3 totalAmt">
+                    <select class="form-control" ng-options="o as o for o in number" ng-model="no_of_tkt"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="hr-row"/>
+    <div class="row">
+        <div class="col-md-8">
+            <form role="form" name="bookTickets" ng-submit="processForm()">
+                <div class="col-md-12" ng-repeat="(key, seat) in seats">
+                    <div class="col-md-2 seat mtop5">{{key}}</div>
+                    <div class="col-md-2 seat mleft10 mtop5 seatI"  ng-repeat="num in seat" ng-class="{sel: newSelectedSeats[key].indexOf($index) != -1, 'sold-out':oldSelectedSeats[key][$index] == num}" ng-click="selectSeat(key, $index)" ng-disabled="true">
+                        {{num}}
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-4">
+            <h3>{{selectedSize}} No. of Tickets Selected</h3>
+            <div class="viewtktdetails">
+                <div ng-repeat="(key, value) in newSelectedSeats">
+                    <span class="fbold" data-ng-class="{sticket: $index !=0}" ng-repeat="s in value">{{key + (s+1)}}</span>
+                </div>
+            </div>
+            <div class="bottom-proceed">
+                <div class="col-md-12">
+                    <button class="btn btn-success btn-proceed procbrn btn_marrgt" data-ng-disabled="selectedSize==0" type="button" ng-click="processForm()">Proceed</button>
+                    <button  class="btn btn-success btn-proceed procbrn btn_marlft" data-ng-disabled="selectedSize==0" type="button" ng-click="resetSelectedRows()">Cancel</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
