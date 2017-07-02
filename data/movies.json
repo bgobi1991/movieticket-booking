@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Vanamagan",
+    "rating": 1,
+    "availability": 9,
+    "review": "",
+    "thumb": "/images/vanamagan.jpg",
+    "showTime": ["1498784100477", "1498787700"],
+    "cost": 120,
+    "censor": "U",
+    "lang": "tamil"
+  },
+  {
+    "id": 2,
+    "name": "yevanavan",
+    "rating": 1,
+    "availability": 9,
+    "review": "",
+    "thumb": "/images/yevanavan.jpg",
+    "showTime": ["1498784100477", "1498788000213"],
+    "cost": 120,
+    "censor": "U",
+    "lang": "tamil"
+  },
+  {
+    "id": 3,
+    "name": "Ivan Thanthiran",
+    "rating": 1,
+    "availability": 9,
+    "review": "",
+    "thumb": "/images/ivan-thanthiran.jpg",
+    "showTime": ["1498784100477", "1498788000213"],
+    "cost": 120,
+    "censor": "U",
+     "lang": "tamil"
+  },
+  {
+    "id": 4,
+    "name": "AAA",
+    "rating": 1,
+    "availability": 9,
+    "review": "",
+    "thumb": "/images/aaa.jpg",
+    "showTime": ["1498784100477", "1498788000213"],
+    "cost": 120,
+    "censor": "U/A",
+     "lang": "tamil"
+  },
+  {
+    "id": 5,
+    "name": "Transformers",
+    "rating": 1,
+    "availability": 9,
+    "review": "",
+    "thumb": "/images/transformers.jpg",
+    "showTime": ["1498784100477", "1498788000213"],
+    "cost": 120,
+    "censor": "U/A",
+    "lang": "english"
+  }
+]
