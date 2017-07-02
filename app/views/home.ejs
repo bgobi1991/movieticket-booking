@@ -1,0 +1,18 @@
+<div class="">
+    <!-- Example row of columns -->
+    <div class="row movies-list">
+        <div class="col-md-4" data-ng-repeat="movie in movies | orderBy:'name':false | filter:search" >
+            <h2>{{movie.name | uppercase | limitTo:20}}</h2>
+            <div toggle-info="" class="movie-inner">
+                <img data-ng-src="{{movie.thumb}}" class="thumb-big"/>
+                <div class="movie-info"  style="display: none;">
+                    <div class="censor">{{movie.censor}}</div>
+                    <div class="lang">{{movie.lang}}</div>
+                </div>
+            </div>
+            <p style="margin: 10px 0 10px">
+                <a  data-ng-repeat="sTime in movie.showTime" data-ng-href="#/booktickets/{{movie.id}}/{{sTime}}"  data-ng-class="{'mleft10': $index != 0}" class="btn btn-success" role="button" data-ng-disabled="movie.availability == 0">{{sTime | date:'HH:mm a'}}</a>
+            </p>
+        </div>
+    </div>
+</div>
